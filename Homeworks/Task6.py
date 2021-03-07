@@ -11,7 +11,7 @@ https://drive.google.com/file/d/1S61A6uOFO3_YSilFb_aNRE7skTcVE5N3/view?usp=shari
 import random
 print("Программа-игра в угадайку. Программа загадывает целое число от 0 до 100, пользователю дается 10 попыток отгадать число.\nПосле каждого не правильного ответа будет дана подсказка для следующего ответа")
 random_number = random.randint(0, 100)
-i = 5
+i = 10
 while i > 0:
     user_number = int(input("Введите число: "))
     if user_number > random_number:
