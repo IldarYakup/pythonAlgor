@@ -5,21 +5,21 @@
 чем то, что загадано.
 Если за 10 попыток число не отгадано, вывести правильный ответ.
 """
+"""
+https://drive.google.com/file/d/1S61A6uOFO3_YSilFb_aNRE7skTcVE5N3/view?usp=sharing
+"""
 import random
 print("Программа-игра в угадайку. Программа загадывает целое число от 0 до 100, пользователю дается 10 попыток отгадать число.\nПосле каждого не правильного ответа будет дана подсказка для следующего ответа")
 random_number = random.randint(0, 100)
-i = 10
-while True:
+i = 5
+while i > 0:
     user_number = int(input("Введите число: "))
     if user_number > random_number:
         print(f'{user_number} больше загаданного числа. У вас осталось {i-1} попыток')
-
     elif user_number < random_number:
         print(f'{user_number} меньше загаданного числа. У вас осталось {i-1} попыток')
     else:
         print('Поздравляю! Вы отгадали правильное число')
         break
     i-=1
-    if i ==0:
-        print(f'К сожалению, вы не смогли отгадать число. Было загадано число {random_number}')
-        break
+print(f'К сожалению, вы не смогли отгадать число. Было загадано число {random_number}')

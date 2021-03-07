@@ -2,6 +2,9 @@
 Сформировать из введенного числа обратное по порядку входящих в него цифр и вывести на экран.
 Например, если введено число 3486, надо вывести 6843.
 """
+"""
+https://drive.google.com/file/d/1S61A6uOFO3_YSilFb_aNRE7skTcVE5N3/view?usp=sharing
+"""
 def reverse(a):
     i = len(str(a))
     final = 0
