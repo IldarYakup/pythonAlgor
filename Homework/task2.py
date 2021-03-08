@@ -18,5 +18,5 @@ for i in array:
     if i%2==0:
         second_array.append(array.index(i))
         third_array.append(i)
-print(f'Четные числа указаны в списке {third_array}')
+print(f'Четные числа в списке {third_array}')
 print(f'И имеют индексы {second_array}')
