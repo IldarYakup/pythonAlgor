@@ -28,3 +28,5 @@ array.pop(first_index+1)
 array.insert(second_index, first_el)
 array.pop(second_index+1)
 print(f'Производим замену местами максимального и минимального значения\n{array}')
+
+"""Долго я к этому шел"""
