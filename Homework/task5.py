@@ -4,7 +4,6 @@
 Примечание к задаче: пожалуйста не путайте «минимальный» и «максимальный отрицательный».
 Это два абсолютно разных значения.
 """
-#
 import random
 
 SIZE = 10
@@ -18,6 +17,6 @@ for i in range(0, len(array)):
         second_array.append(array[i])
 max_num = second_array[0]
 for i in range(0, len(second_array)):
-    if second_array[i] >= max_num:
+    if second_array[i] > max_num:
         max_num = second_array[i]
 print(f'Максимальное отрицательное число в списке {max_num} и находится  на позиции "{array.index(max_num)+1}" и имеет индекс "{array.index(max_num)}"')
