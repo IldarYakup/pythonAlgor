@@ -6,6 +6,3 @@
 
 from collections import defaultdict
 
-quan = int(input("Введите количество предприятий, которые будут заполнятся: "))
-defdict = defaultdict(int)
-print(defdict)
