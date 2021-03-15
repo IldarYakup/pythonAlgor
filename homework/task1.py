@@ -4,10 +4,10 @@
 чья прибыль выше среднего и ниже среднего.
 """
 
-from collections import defaultdict
+from collections import Counter
 
 user_company = int(input("Введите количество предприятий: "))
-dict = []
+list_dict = []
 for i in range(user_company):
     name = input("Введите название компании: ")
     quarter_i = float(input("Введите прибыль за I квартал: "))
@@ -19,6 +19,31 @@ for i in range(user_company):
                "II квартал": quarter_ii,
                "III квартал": quarter_iii,
                "IV квартал": quarter_iv,
-               "Средняя прибыль": (quarter_i + quarter_ii + quarter_iii + quarter_iv)/4}
-    dict.append(company)
-print(dict)
+               }
+    list_dict.append(company)
+profit = Counter()
+for company in list_dict:
+    profit_comp = company.copy()
+    del profit_comp['name']
+    profit += Counter(profit_comp)
+average = sum(profit.values())/user_company
+print(f'Среднегодовая прибыль между всему предприятиями равна {average}')
+most_avr = []
+least_avr = []
+avr = []
+for i, company in enumerate(list_dict):
+    avr_company = company["I квартал"] + company["II квартал"] + company["III квартал"] + company["IV квартал"]
+    if avr_company < average:
+        least_avr += [[company["name"], avr_company]]
+    elif avr_company > average:
+        most_avr += [[company["name"], avr_company]]
+    else:
+        avr = company["name"]
+
+for a in most_avr:
+    print(f'Предприятия {a[0]} со среднегодовой прибылью {a[1]} выше среднего показателя всех предприятий')
+for a in avr:
+    print(f'Прибыль предприятия {a} равна среднегодовой прибыли всех предприятий')
+for a in least_avr:
+    print(f'Предприятия {a[0]} со среднегодовой прибылью {a[1]} ниже среднего показателя всех предприятий')
+
