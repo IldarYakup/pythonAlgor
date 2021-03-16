@@ -23,7 +23,6 @@ def sum_hex(first_list, second_list):
         result.appendleft(a)
         first_list.pop(-1)
         second_list.pop(-1)
-    print(result)
     for a in result:
         sum_list.append(definition[a])
     return f'Сумма ваших шестнадцатеричных чисел - {sum_list}'
@@ -61,7 +60,6 @@ definition = {'0': 0,
               14: 'E',
               15: 'F'
               }
-
 first = (input('Введите первое целое шестнадцатеричное число: ').upper())
 second = (input('Введите первое целое шестнадцатеричное число: ').upper())
 first_list = []
@@ -76,16 +74,3 @@ for a in second:
 print(first_list)
 print(second_list)
 print(sum_hex(first_list, second_list))
-for a in first:
-    first_list += a
-for a in second:
-    second_list += a
-if len(first_list) < len(second_list):
-    first_list, second_list = second_list, first_list
-while len(first_list) > len(second_list):
-    second_list.insert(0, 0)
-    second_list[0] = str(second_list[0])
-    for a in first_list:
-        definition[first_list[a]] * definition[second_list[-1]]
-print(first_list)
-print(second_list)
