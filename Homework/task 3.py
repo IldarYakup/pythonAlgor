@@ -30,4 +30,4 @@ while m != 0:
     m -= 1
 
 print(f'Медианой в массиве {array} является {res_array[0]}')
-print(f"Проверка медианы:\nЧисла перед медианой {before_median} в количестве {len(before_median)} значений\nЧисла после медианы {post_median} в количестве {len(post_median)} значений")
+print(f"Проверка медианы:\nМассив чисел перед медианой в количестве {len(before_median)} значений - {before_median} \nМассив чисел после медианы в количестве {len(post_median)} значений - {post_median} ")
