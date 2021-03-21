@@ -5,7 +5,7 @@
 Но если это слишком сложно, используйте метод сортировки, который не рассматривался на уроках (сортировка слиянием также недопустима).
 """
 import random
-MIN_NUM = 0
+MIN_NUM = -50
 MAX_NUM = 50
 m = random.randint(1, 10)
 array = [random.randint(MIN_NUM, MAX_NUM) for _ in range(2 * m + 1)]
@@ -30,4 +30,4 @@ while m != 0:
     m -= 1
 
 print(f'Медианой в массиве {array} является {res_array[0]}')
-print(f"Проверка медианы:\nМассив чисел перед медианой в количестве {len(before_median)} значений - {before_median} \nМассив чисел после медианы в количестве {len(post_median)} значений - {post_median} ")
+print(f"Проверка медианы:\nЧисла перед медианой в количестве {len(before_median)} значений - {before_median} \nЧисла после медианы в количестве {len(post_median)} значений - {post_median} ")
